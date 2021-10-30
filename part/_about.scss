@@ -1,0 +1,13 @@
+.about {
+    @extend %section;
+    @extend %section_all_size;
+    @extend %section_color_indigo;
+    
+    .container {
+        @extend %container_item_full;   
+    }
+
+    h2 {
+        color: $violet;
+    }
+}

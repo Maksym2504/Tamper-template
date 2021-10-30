@@ -1,0 +1,20 @@
+.footer {
+    @extend %section;
+    @extend %section_footer_size;
+    @extend %section_color_white;
+
+    background-color: $indigo;  
+    
+    .container {
+        @extend %container_item_full; 
+    }
+
+    &__left {
+        flex-basis: 65%;
+    }
+
+    &__right {
+        flex-basis: 30%;
+        text-align:right;
+    }
+}

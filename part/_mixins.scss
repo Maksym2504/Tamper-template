@@ -1,0 +1,103 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin transition($property: transform) {
+    transition: 0.5s $property;
+}
+
+//backgrounds
+@mixin bg($url, $position) {
+    background: {
+        image: url($url);
+        position: $position top;
+    }
+}
+
+//sections
+%section {
+    display:flex; 
+    flex-direction:column;  
+
+    @include tablet {
+        min-height: 100%;
+    }
+}
+
+%section_all_size {
+    min-height: 512px; 
+    
+    @include tablet {
+        min-height: 100%;
+    }
+}
+
+%section_footer_size {
+    min-height: 256px;
+}
+
+%section_full_size {
+    min-height: 100%;
+}
+
+%section_color_white {
+    color:$white;
+}
+
+%section_color_indigo {
+    color: $indigo;
+}
+
+%section_bg {
+    background: {
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+//containers
+%container {
+    flex-grow:1;
+    width: 90%; 
+    max-width: 940px; 
+    margin: 0 auto; 
+    padding: 50px 0;
+    display:flex;
+    align-items:center;
+}
+
+%container_item_left {
+    justify-content: flex-start;
+    
+    @include tablet{
+        justify-content: center;
+    }
+}
+
+%container_item_center {
+    justify-content:center;
+}
+
+%container_item_full {
+    justify-content: space-between;
+
+    @include tablet{
+        justify-content: center;
+    }
+}
+
+%container_item_end {
+    justify-content: flex-end;
+
+    @include tablet{
+        justify-content: center;
+    }
+}

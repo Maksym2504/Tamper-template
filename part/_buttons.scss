@@ -1,0 +1,45 @@
+.button {
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border-radius: 5px;
+    letter-spacing: .1em;
+    margin: 25px 0;
+    position:relative;
+    overflow:hidden;
+
+    &::after{
+        content:'';
+        display:block;
+        position: absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        transform:scaleX(0);
+        @include transition;
+        
+    }
+
+    &:hover::after {
+        transform:scaleX(1.01);
+    }
+
+    &--white {
+        border: 1px solid $white;
+
+        &::after {
+            background-color: rgba(255,255,255,.8);
+        }
+        
+    }
+
+    &--indigo {
+        border: 1px solid $indigo;
+        background-color: $indigo;
+        color: $white;
+        padding: 25px 50px;
+        &::after {
+            background-color: rgba(255,255,255,.8);
+        }
+    }
+}

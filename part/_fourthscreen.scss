@@ -1,0 +1,11 @@
+.fourthscreen {
+    @extend %section;
+    @extend %section_full_size;
+    @extend %section_color_white;
+    @extend %section_bg;
+    @include bg('img/bg6.jpg', left);
+
+    .container {
+        @extend %container_item_left;
+    }
+}

@@ -1,0 +1,9 @@
+.offer {
+    @extend %section;
+    @extend %section_footer_size;
+    
+    img {
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,30 @@
+.contacts {
+    @extend %section;
+    @extend %section_all_size;
+    @extend %section_color_indigo;
+
+    .container {
+        @extend %container_item_full;        
+    }
+
+    &__left {
+        flex-basis: 65%;
+    }
+
+    &__right {
+        flex-basis: 30%;
+    }
+
+    h2 {
+        color: $violet;
+    }
+
+    ul{
+        list-style-type:none;
+        color: $bordo;
+    }
+
+    a {
+        color: $bordo;
+    }
+}

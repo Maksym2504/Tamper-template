@@ -1,0 +1,15 @@
+.secondscreen {
+    @extend %section;
+    @extend %section_full_size;
+    @extend %section_color_indigo;
+    @extend %section_bg;
+    @include bg('img/bg4.jpg', left);
+
+    .container {
+        @extend %container_item_left;
+    }
+
+    h2 {
+        color: $violet;
+    }
+}

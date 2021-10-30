@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: {
+        family: $font;
+        size: $basic;
+    }
+    line-height: 1.5em;
+}
+
+.container {
+    @extend %container;
+  
+    &__item {
+        flex-basis: 42%;
+        padding-bottom: 25px;
+    }
+
+    &__center {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    @include tablet {
+        flex-direction:column;
+        justify-content: center;
+        text-align:center;
+    }
+}
+
+h1 {
+    font: {
+        size: 2.7rem;
+        weight: normal;
+    }
+
+    line-height: 1.5em;
+    letter-spacing: .1em;
+
+    @include tablet {
+        text-align:center;
+    }
+}
+
+h2 {
+    font: {
+        size: 2rem;
+        weight: normal;
+    }
+    margin: 50px 0 25px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.logo {
+    flex-basis:60%;
+    flex-grow:1;
+    margin: 0 auto;
+}
+
